@@ -1,0 +1,31 @@
+# Ignore Python virtual environments
+Backend/islamic-chatbot-env/
+
+# Ignore environment variables
+Backend/.env
+
+# Ignore Python cache files
+Backend/__pycache__/
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore local config files
+*.sqlite3
+*.log
+
+# Ignore data files
+Backend/data/
+
+# Ignore Node modules (if applicable in the Frontend)
+Frontend/node_modules/
+
+# Ignore build files (if applicable in the Frontend)
+Frontend/build/
+Frontend/dist/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
