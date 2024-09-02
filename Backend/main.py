@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from utils import loadPdfs, getAnswer
 import config
@@ -6,6 +7,14 @@ import config
 app = FastAPI()
 
 pdfTexts = loadPdfs(config.PDF_DIR)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 class Question(BaseModel):
